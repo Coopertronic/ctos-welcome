@@ -8,7 +8,6 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
@@ -24,7 +23,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(799, 389)
+        MainWindow.resize(805, 389)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -33,12 +32,15 @@ class Ui_MainWindow(object):
         self.main_title.setObjectName(u"main_title")
         self.main_title_logo = QLabel(self.centralwidget)
         self.main_title_logo.setObjectName(u"main_title_logo")
-        self.main_title_logo.setPixmap(QPixmap(u"../../Pictures/Coopertronics/Cutting_Room/Dragon.greenWhite.2024.square.png"))
+        self.main_title_logo.setMaximumSize(QSize(300, 300))
+        self.main_title_logo.setPixmap(QPixmap(u"assets/Dragon.greenWhite.2024.square.png"))
+        self.main_title_logo.setAlignment(Qt.AlignCenter)
 
         self.main_title.addWidget(self.main_title_logo)
 
         self.main_title_head = QLabel(self.centralwidget)
         self.main_title_head.setObjectName(u"main_title_head")
+        self.main_title_head.setMaximumSize(QSize(1200, 400))
         font = QFont()
         font.setFamilies([u"Sunflower Light"])
         font.setPointSize(36)
@@ -56,6 +58,7 @@ class Ui_MainWindow(object):
         font1.setFamilies([u"Sunflower Medium"])
         font1.setPointSize(16)
         self.thBtns.setFont(font1)
+        self.thBtns.setAlignment(Qt.AlignCenter)
         self.verticalLayout_2 = QVBoxLayout(self.thBtns)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.btn_grid = QGridLayout()
@@ -135,7 +138,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 799, 30))
+        self.menubar.setGeometry(QRect(0, 0, 805, 22))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
