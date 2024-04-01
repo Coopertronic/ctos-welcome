@@ -53,6 +53,7 @@ class Ui_MainWindow(object):
         self.btn_help.setFont(font)
         self.btn_help.setObjectName("btn_help")
         self.btn_grid.addWidget(self.btn_help, 0, 1, 1, 1)
+##  Home Page Button
         self.btn_home = QtWidgets.QPushButton(self.thBtns)
         self.btn_home.setMaximumSize(QtCore.QSize(250, 42))
         font = QtGui.QFont()
@@ -60,7 +61,9 @@ class Ui_MainWindow(object):
         font.setPointSize(14)
         self.btn_home.setFont(font)
         self.btn_home.setObjectName("btn_home")
+        self.btn_home.clicked.connect(self.btn_home_action)
         self.btn_grid.addWidget(self.btn_home, 1, 1, 1, 1)
+
         self.btn_surgest = QtWidgets.QPushButton(self.thBtns)
         self.btn_surgest.setMaximumSize(QtCore.QSize(250, 42))
         font = QtGui.QFont()
@@ -130,6 +133,10 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def btn_home_action(self):
+        print("HOME PAGE button pressed")
+        subprocess.run(["xdg-open","https://coopertronic.co.uk/"])
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
