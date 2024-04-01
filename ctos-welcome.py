@@ -9,7 +9,8 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import sys
+import subprocess
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
