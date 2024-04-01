@@ -1,6 +1,6 @@
 # This Python file uses the following encoding: utf-8
 import sys
-
+import subprocess
 from PySide6.QtWidgets import QApplication, QMainWindow
 
 # Important:
@@ -14,6 +14,12 @@ class MainWindow(QMainWindow):
         super().__init__(parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.ui.btn_home.clicked.connect(self.btn_home_action)
+        #self.btn_home.clicked.connect(self.btn_home_action)
+        
+    def btn_home_action(self):
+        print("HOME PAGE button pressed")
+        subprocess.run(["xdg-open","https://coopertronic.co.uk/"])
 
 
 if __name__ == "__main__":

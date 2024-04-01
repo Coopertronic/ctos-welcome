@@ -73,7 +73,7 @@ class Ui_MainWindow(object):
 
         self.btn_home = QPushButton(self.thBtns)
         self.btn_home.setObjectName(u"btn_home")
-        self.btn_home.clicked.connect(self.btn_home_action)
+        #self.btn_home.clicked.connect(self.btn_home_action)
         self.btn_home.setMaximumSize(QSize(250, 42))
         self.btn_home.setFont(font2)
 
@@ -148,9 +148,9 @@ class Ui_MainWindow(object):
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
     
-    def btn_home_action(self):
-        print("HOME PAGE button pressed")
-        subprocess.run(["xdg-open","https://coopertronic.co.uk/"])
+    #def btn_home_action(self):
+    #    print("HOME PAGE button pressed")
+    #    subprocess.run(["xdg-open","https://coopertronic.co.uk/"])
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
