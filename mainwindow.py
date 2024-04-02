@@ -15,10 +15,15 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.btn_home.clicked.connect(self.btn_home_action)
+        self.ui.btn_about.clicked.connect(self.btn_about_action)
 
     def btn_home_action(self):
         print("HOME PAGE button pressed")
         subprocess.run(["xdg-open","https://coopertronic.co.uk/"])
+
+    def btn_about_action(self):
+        print("ABOUT button pressed")
+        subprocess.Popen(["about",""])
 
 
 if __name__ == "__main__":

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../ctos-about"
+		},
+		{
+			"path": "../discworld2-pkgbuild"
+		}
+	],
+	"settings": {}
+}
