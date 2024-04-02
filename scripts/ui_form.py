@@ -25,7 +25,7 @@ class Ui_MainWindow(object):
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(805, 389)
         icon = QIcon()
-        icon.addFile(u"assets/org.dragonWG.dragonWG.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u"/usr/share/icons/hicolor/scalable/apps/org.dragonWG.dragonWG.svg", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -36,7 +36,7 @@ class Ui_MainWindow(object):
         self.main_title_logo = QLabel(self.centralwidget)
         self.main_title_logo.setObjectName(u"main_title_logo")
         self.main_title_logo.setMaximumSize(QSize(300, 300))
-        self.main_title_logo.setPixmap(QPixmap(u"assets/Dragon.greenWhite.2024.square.png"))
+        self.main_title_logo.setPixmap(QPixmap(u"/usr/share/welcome/assets/Dragon.greenWhite.2024.square.png"))
         self.main_title_logo.setAlignment(Qt.AlignCenter)
 
         self.main_title.addWidget(self.main_title_logo)
