@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Welcome to Coopertronic OS
 Comment=Presents the Welcome screen for Coopertronic OS
-Exec=about
+Exec=welcome
 Icon=org.dragonWG.dragonWG
 Terminal=false
 Type=Application
