@@ -9,7 +9,7 @@ url="https://coopertronic-ws.ddns.net/ctos-assets/"
 license=('LGPL3')
 depends=('python' 'pyside6' 'about')
 source=("$url$pkgname/$pkgname-v$pkgver.zip")
-md5sums=('04efc012488e4f483931ed5a8325594e')
+md5sums=('ed1043b724f431ec8a0f20b3c72b31b9')
 
 package() {
   ##  Install documentation
@@ -24,11 +24,11 @@ package() {
   install -D -m644 $srcdir/scripts/* $pkgdir/usr/share/$pkgname/
   install -d $pkgdir/usr/share/$pkgname/assets
   install -D -m755 $srcdir/assets/$pkgname.sh $pkgdir/usr/bin/$pkgname
-  install -D -m755 $srcdir/assets/$pkgname.svg $pkgdir/usr/share/$pkgname/assets/
+  install -D -m755 $srcdir/assets/Dragon.greenWhite.2024.square.png $pkgdir/usr/share/$pkgname/assets/
 
   ##  Install game icon
-  #install -d $pkgdir/usr/share/icons/hicolor/scalable/apps
-  #install -D -m644 org.$pkgname.$pkgname.svg $pkgdir/usr/share/icons/hicolor/scalable/apps/org.$pkgname.$pkgname.svg
+  install -d $pkgdir/usr/share/icons/hicolor/scalable/apps
+  install -D -m644 $srcdir/assets/org.dragonWG.dragonWG.svg $pkgdir/usr/share/icons/hicolor/scalable/apps/org.dragonWG.dragonWG.svg
 
   ##  Install Application desktop launcher
   install -d $pkgdir/usr/share/applications
